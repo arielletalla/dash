@@ -1,4 +1,5 @@
 import dash
+import os
 from dash import dcc, html, Input, Output, State
 import plotly.express as px
 import pandas as pd
@@ -2851,9 +2852,12 @@ def update_prediction(n_clicks, age, niveau_etude, genre, situation_mat, deja_do
 
     return f"Résultat : {resultat_prediction}"
 
+host = '0.0.0.0'  # Utilise '0.0.0.0' pour accepter les connexions externes
+port = int(os.environ.get('PORT', 8050))  # Utilise la variable d'environnement PORT ou 8050 par défaut
 
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=8050)
+    app.run_server(debug=True, host=host, port=port)
+    
 
