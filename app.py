@@ -312,8 +312,7 @@ fig_cluster_stats.update_layout(
 
 encoded_columns = [col_encoded for col_encoded in df_encoded.columns if col_encoded.startswith('Niveau d\'etude' + '_')]
     
-if not encoded_columns:
-    print(f"Aucune colonne encodée trouvée pour '{'Niveau d\'etude'}'. Vérifiez le nom de la variable.")
+
     
 
     # Convertir les colonnes encodées en valeurs numériques
@@ -361,8 +360,7 @@ fig_clus_etude.update_layout(
     # Filtrer les colonnes encodées correspondant à la variable catégorielle
 encoded_columns = [col_encoded for col_encoded in df_encoded.columns if col_encoded.startswith('Genre' + '_')]
     
-if not encoded_columns:
-    print(f"Aucune colonne encodée trouvée pour '{'Genre'}'. Vérifiez le nom de la variable.")
+
     
     # Convertir les colonnes encodées en valeurs numériques
 df_encoded[encoded_columns] = df_encoded[encoded_columns].apply(pd.to_numeric, errors='coerce')
@@ -408,9 +406,7 @@ fig_clus_genre.update_layout(
 
     # Filtrer les colonnes encodées correspondant à la variable catégorielle
 encoded_columns = [col_encoded for col_encoded in df_encoded.columns if col_encoded.startswith('Situation Matrimoniale (SM)' + '_')]
-    
-if not encoded_columns:
-    print(f"Aucune colonne encodée trouvée pour '{'Situation Matrimoniale (SM)'}'. Vérifiez le nom de la variable.")
+
   
     # Convertir les colonnes encodées en valeurs numériques
 df_encoded[encoded_columns] = df_encoded[encoded_columns].apply(pd.to_numeric, errors='coerce')
@@ -457,8 +453,6 @@ fig_clus_stat.update_layout(
     # Filtrer les colonnes encodées correspondant à la variable catégorielle
 encoded_columns = [col_encoded for col_encoded in df_encoded.columns if col_encoded.startswith('Arrondissement_final' + '_')]
     
-if not encoded_columns:
-    print(f"Aucune colonne encodée trouvée pour '{'Arrondissement_final'}'. Vérifiez le nom de la variable.")
   
     # Convertir les colonnes encodées en valeurs numériques
 df_encoded[encoded_columns] = df_encoded[encoded_columns].apply(pd.to_numeric, errors='coerce')
@@ -507,8 +501,7 @@ fig_clus_ar.update_layout(
     # Filtrer les colonnes encodées correspondant à la variable catégorielle
 encoded_columns = [col_encoded for col_encoded in df_encoded.columns if col_encoded.startswith('ÉLIGIBILITÉ AU DON.' + '_')]
     
-if not encoded_columns:
-    print(f"Aucune colonne encodée trouvée pour '{'ÉLIGIBILITÉ AU DON.'}'. Vérifiez le nom de la variable.")
+
     
 
     # Convertir les colonnes encodées en valeurs numériques
@@ -555,8 +548,7 @@ fig_clus_eli.update_layout(
     # Filtrer les colonnes encodées correspondant à la variable catégorielle
 encoded_columns = [col_encoded for col_encoded in df_encoded.columns if col_encoded.startswith('New_Religion' + '_')]
     
-if not encoded_columns:
-    print(f"Aucune colonne encodée trouvée pour '{'New_Religion'}'. Vérifiez le nom de la variable.")
+
     
 
     # Convertir les colonnes encodées en valeurs numériques
