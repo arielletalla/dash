@@ -10,3 +10,4 @@ branca
 requests
 pickle-mixin
 gunicorn
+waitress
