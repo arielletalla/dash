@@ -11,3 +11,4 @@ requests
 pickle-mixin
 gunicorn
 waitress
+openpyxl
