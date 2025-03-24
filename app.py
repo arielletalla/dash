@@ -2858,6 +2858,7 @@ port = int(os.environ.get('PORT', 8050))  # Utilise la variable d'environnement 
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True, host=host, port=port)
+    app.run(debug=True, host=host, port=port)
+    
     
 
