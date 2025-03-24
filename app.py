@@ -310,10 +310,10 @@ fig_cluster_stats.update_layout(
 )
 
 
-encoded_columns = [col_encoded for col_encoded in df_encoded.columns if col_encoded.startswith("Niveau d'etude" + '_')]
+encoded_columns = [col_encoded for col_encoded in df_encoded.columns if col_encoded.startswith('Niveau d\'etude' + '_')]
     
 if not encoded_columns:
-    print(f"Aucune colonne encodée trouvée pour '{"Niveau d'etude"}'. Vérifiez le nom de la variable.")
+    print(f"Aucune colonne encodée trouvée pour '{'Niveau d\'etude'}'. Vérifiez le nom de la variable.")
     
 
     # Convertir les colonnes encodées en valeurs numériques
