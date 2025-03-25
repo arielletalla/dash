@@ -283,12 +283,11 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheets, suppress_ca
 gdf = gpd.read_file("Region cameroun.geojson")
 
 # Vérifier le système de coordonnées
-print("Système de coordonnées initial :", gdf.crs)
 
 # Reprojeter en WGS84 (EPSG:4326) si nécessaire
 if gdf.crs != "EPSG:4326":
     gdf = gdf.to_crs("EPSG:4326")
-    print("Données reprojetées en WGS84 (EPSG:4326).")
+    
 
 # Charger le fichier GeoJSON
 gdf2 = gpd.read_file("arrondissement_douala.geojson")
@@ -299,12 +298,12 @@ for col in gdf2.columns:
 
 
 # Vérifier le système de coordonnées
-print("Système de coordonnées initial :", gdf2.crs)
+
 
 # Reprojeter en WGS84 (EPSG:4326) si nécessaire
 if gdf2.crs != "EPSG:4326":
     gdf2 = gdf2.to_crs("EPSG:4326")
-    print("Données reprojetées en WGS84 (EPSG:4326).")
+   
 
 
 
