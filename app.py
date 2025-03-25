@@ -1,4 +1,5 @@
 import dash
+from dash import dash_table
 from dash import dcc, html, Input, Output, State
 import plotly.express as px
 import pandas as pd
@@ -3788,7 +3789,7 @@ def update_prediction(n_clicks, age, niveau_etude, genre, situation_mat, deja_do
         if genre == 'Femme':
             data[col] = women_mapping.get(col, "Non")
         else:
-            data[col] = "Non concerné"
+            data.loc[:, 'col'] = "Non concerné"
     
     
    
@@ -3804,6 +3805,6 @@ port = int(os.environ.get('PORT', 8050))  # Utilise la variable d'environnement 
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host=host, port=port)
-    
-    
+    port = int(os.environ.get('PORT', 8050))  # Render fournit le PORT
+    app.run_server(host='0.0.0.0', port=port, debug=False)
+
