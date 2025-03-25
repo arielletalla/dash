@@ -3801,5 +3801,5 @@ def update_prediction(n_clicks, age, niveau_etude, genre, situation_mat, deja_do
 #host = '0.0.0.0'  # Utilise '0.0.0.0' pour accepter les connexions externes
 port = int(os.environ.get('PORT', 8050))  # Utilise la variable d'environnement PORT ou 8050 par défaut
 
-port = int(os.environ.get('PORT', 8050))
-    server.run(host='0.0.0.0', port=port, debug=False)  # Run the Flask server
+if __name__ == "__main__":
+    server.run(host="0.0.0.0", port=port, debug=False) 
