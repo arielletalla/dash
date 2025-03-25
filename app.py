@@ -440,8 +440,7 @@ fig_cluster_stats.update_layout(
 
 encoded_columns = [col_encoded for col_encoded in df_encoded.columns if col_encoded.startswith("Niveau d'etude" + '_')]
     
-if not encoded_columns:
-    print(f"Aucune colonne encodée trouvée pour '{"Niveau d'etude"}'. Vérifiez le nom de la variable.")
+
     
 
     # Convertir les colonnes encodées en valeurs numériques
@@ -488,9 +487,8 @@ fig_clus_etude.update_layout(
 
     # Filtrer les colonnes encodées correspondant à la variable catégorielle
 encoded_columns = [col_encoded for col_encoded in df_encoded.columns if col_encoded.startswith('Genre' + '_')]
-    
-if not encoded_columns:
-    print(f"Aucune colonne encodée trouvée pour '{'Genre'}'. Vérifiez le nom de la variable.")
+
+   
     
     # Convertir les colonnes encodées en valeurs numériques
 df_encoded[encoded_columns] = df_encoded[encoded_columns].apply(pd.to_numeric, errors='coerce')
@@ -537,8 +535,8 @@ fig_clus_genre.update_layout(
     # Filtrer les colonnes encodées correspondant à la variable catégorielle
 encoded_columns = [col_encoded for col_encoded in df_encoded.columns if col_encoded.startswith('Situation Matrimoniale (SM)' + '_')]
     
-if not encoded_columns:
-    print(f"Aucune colonne encodée trouvée pour '{'Situation Matrimoniale (SM)'}'. Vérifiez le nom de la variable.")
+
+   
   
     # Convertir les colonnes encodées en valeurs numériques
 df_encoded[encoded_columns] = df_encoded[encoded_columns].apply(pd.to_numeric, errors='coerce')
@@ -585,8 +583,8 @@ fig_clus_stat.update_layout(
     # Filtrer les colonnes encodées correspondant à la variable catégorielle
 encoded_columns = [col_encoded for col_encoded in df_encoded.columns if col_encoded.startswith('Arrondissement_final' + '_')]
     
-if not encoded_columns:
-    print(f"Aucune colonne encodée trouvée pour '{'Arrondissement_final'}'. Vérifiez le nom de la variable.")
+
+   
   
     # Convertir les colonnes encodées en valeurs numériques
 df_encoded[encoded_columns] = df_encoded[encoded_columns].apply(pd.to_numeric, errors='coerce')
@@ -637,9 +635,8 @@ fig_clus_ar.update_layout(
     # Filtrer les colonnes encodées correspondant à la variable catégorielle
 encoded_columns = [col_encoded for col_encoded in df_encoded.columns if col_encoded.startswith('ÉLIGIBILITÉ AU DON.' + '_')]
     
-if not encoded_columns:
-    print(f"Aucune colonne encodée trouvée pour '{'ÉLIGIBILITÉ AU DON.'}'. Vérifiez le nom de la variable.")
-    
+
+ 
 
     # Convertir les colonnes encodées en valeurs numériques
 df_encoded[encoded_columns] = df_encoded[encoded_columns].apply(pd.to_numeric, errors='coerce')
@@ -685,8 +682,8 @@ fig_clus_eli.update_layout(
     # Filtrer les colonnes encodées correspondant à la variable catégorielle
 encoded_columns = [col_encoded for col_encoded in df_encoded.columns if col_encoded.startswith('New_Religion' + '_')]
     
-if not encoded_columns:
-    print(f"Aucune colonne encodée trouvée pour '{'New_Religion'}'. Vérifiez le nom de la variable.")
+
+    
     
 
     # Convertir les colonnes encodées en valeurs numériques
@@ -2822,7 +2819,7 @@ def update_graphs2(active_tab, n_clicks, genre, arrondissement, age_range):
     combinaisons_frequences_df = pd.DataFrame(list(combinaisons_frequences.items()), columns=['Combinaison', 'Fréquence'])
 
         # Vérifier la structure du DataFrame
-    print(combinaisons_frequences_df.head())
+   
 
         # Créer un DataFrame avec les bonnes colonnes
     treemap_data = combinaisons_frequences_df
@@ -2845,7 +2842,7 @@ def update_graphs2(active_tab, n_clicks, genre, arrondissement, age_range):
     len(data2)
     data2_binary = data2.notna().astype(int)  # Convertir les valeurs en 0/1
 
-    print(data2_binary)  # ✅ Vérifier que les valeurs sont bien 0 et 1
+   
 
         # Calcul de la matrice de co-occurrence
     #co_occurrence_matrix = data2_binary.T @ data2_binary
@@ -2860,8 +2857,8 @@ def update_graphs2(active_tab, n_clicks, genre, arrondissement, age_range):
     intersection_matrix=co_occurrence_matrix
 
     
-    print(intersection_matrix)# Produit matriciel pour les intersections
-    print(len(data2))
+   
+   
         
 
      # ✅ Vérifier que la matrice est bien remplie
@@ -3668,7 +3665,7 @@ def update_graphs4(active_tab, n_clicks, genre, arrondissement, age_range):
     
     
     
-    print(comments)
+   
     #fig_mots=generate_wordcloud(comments)
     fig_sentiment = px.histogram(filtered_df, x="sentiment", title='Répartition par sentimnt', color="sentiment",category_orders={"sentiment": sentiment_counts.index.tolist()} )
     fig_label= px.histogram(filtered_df, x="label", title='Répartition par label', color="label",category_orders={"label": label_counts.index.tolist()} )
@@ -3793,11 +3790,8 @@ def update_prediction(n_clicks, age, niveau_etude, genre, situation_mat, deja_do
         else:
             data[col] = "Non concerné"
     
-    # Affichage debug
-    print("Indisponibilités générales:", {k: data[k] for k in indispo_vars})
-    print("Indisponibilités femmes:", {k: data[k] for k in  women_mapping.keys()})
-    print("Non éligibilité:", {k: data[k] for k in non_eligible_vars})
-    print("Données complètes:", data)
+    
+   
 
     resultat_prediction = faire_prediction(data)
     return f"Résultat : {resultat_prediction}"
