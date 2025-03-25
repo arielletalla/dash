@@ -277,7 +277,7 @@ external_stylesheets = [
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets, suppress_callback_exceptions=True)
 
-
+server = app.server 
 
 # Charger le fichier GeoJSON
 gdf = gpd.read_file("Region cameroun.geojson")
