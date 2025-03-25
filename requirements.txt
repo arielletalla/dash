@@ -1,8 +1,7 @@
-
-dash
+dash-table==4.11.0
+dash>=2.0.0
 dash-bootstrap-components
 plotly
-pandas
 numpy
 scikit-learn
 geopandas
