@@ -13,3 +13,7 @@ pickle-mixin
 gunicorn
 waitress
 openpyxl
+branca
+nltk
+wordcloud
+matplotlib
