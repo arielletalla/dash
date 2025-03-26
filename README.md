@@ -1,7 +1,7 @@
 # Dashboard d'Optimisation des Dons de Sang
 
 ## Description
-Cette application Dash permet d'analyser et d'optimiser le processus de don de sang en fournissant des insights détaillés sur les donneurs, l'éligibilité, la fidélisation et l'efficacité des campagnes de sensibilisation. L'application inclut des analyses géographiques et sentimentales ainsi qu'un modèle de prédiction d'éligibilité. voici le lien ver l'application (https://dash-talla.onrender.com)
+Cette application Dash permet d'analyser et d'optimiser le processus de don de sang en fournissant des insights détaillés sur les donneurs, l'éligibilité, la fidélisation et l'efficacité des campagnes de sensibilisation. L'application inclut des analyses géographiques et sentimentales ainsi qu'un modèle de prédiction d'éligibilité. voici le lien ver l'application (https://dash-0zuk.onrender.com) ou (https://dash-talla.onrender.com) . j'ai deploye 2 fois pour garantir l'accessibilite
 ## NB : une fois l'application ouverte,il faut appuyer sur la fleche en bleu (en au a gauche) pour que le Dash se fixe bien
 
 ## Fonctionnalités
@@ -31,7 +31,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
-L'application sera accessible via : [http://127.0.0.1:8050](http://127.0.0.1:8050 , via le lien :https://dash-talla.onrender.com) ou vous changer le compiler en local
+L'application sera accessible via : [http://127.0.0.1:8050](http://127.0.0.1:8050 , via le lien :https://dash-talla.onrender.com) ou (https://dash-0zuk.onrender.com) vous changer le compiler en local
 
 ## Fichiers et Données
 - `app.py` : Script principal contenant la logique du dashboard.
